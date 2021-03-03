@@ -1,5 +1,7 @@
 let selectElementsStartingWithA = (array) => {
-    return 'Write your method here';
+    array.filter((fru) => fru.startsWith("A"));
+    return array;
+
 }
 
 let selectElementsStartingWithVowel = (array) => {
@@ -7,12 +9,15 @@ let selectElementsStartingWithVowel = (array) => {
 }
 
 let removeNullElements = (array) => {
+
     return 'Write your method here';
 }
 
 let removeNullAndFalseElements = (array) => {
-    return 'Write your method here';
-}
+    let filtered = array.filter(function(el) {
+        return el != null;
+    }
+});
 
 let reverseWordsInArray = (array) => {
     return 'Write your method here';
@@ -91,11 +96,13 @@ let sumKeysAndValues = (object) => {
 }
 
 let removeCapitals = (string) => {
-    return 'Write your method here';
+    string = string.slice(1);
+    return string;
 }
 
 let roundUp = (number) => {
-    return 'Write your method here';
+    Math.round()
+    return Math.round(number);
 }
 
 let formatDateNicely = (date) => {
@@ -119,7 +126,9 @@ let squareRoot = (number) => {
 }
 
 let factorial = (number) => {
-    return 'Write your method here';
+    if (number < 0) return -1
+    if (number === 0) return 1;
+    return number * factorial(number - 1);;
 }
 
 let findAnagrams = (string) => {
@@ -127,7 +136,8 @@ let findAnagrams = (string) => {
 }
 
 let convertToCelsius = (number) => {
-    return 'Write your method here';
+    let Fahrenheit = Fahrenheit => (Fahrenheit - 32) * 5/9;
+    return Fahrenheit;
 }
 
 let letterPosition = (array) => {

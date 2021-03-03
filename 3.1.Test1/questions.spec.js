@@ -21,7 +21,6 @@ describe('Les chaines de caractères : ',  () => {
         let result = afficherCar5('Ces exercices sont super!');
         expect(result).toEqual('e');
     });
-
     it('Afficher les 9 premiers caractères',  () => {
         let result = afficher9Car('Je dirais même qu\'ils sont excellent');
         expect(result).toEqual('Je dirais');
@@ -40,6 +39,7 @@ describe('Les chaines de caractères : ',  () => {
         let result = SupprEspaceString(' Rome ne s\'est pas construite en un jour ');
         expect(result).toEqual('Rome ne s\'est pas construite en un jour');
     });
+    /*********************************************************************** */
     it('Afficher true si le parametre d\'entrée de la fonction est de type string',  () => {
         let result = IsString('Est ce une chaine de caractères ?');
         expect(result).toEqual(true);
