@@ -26,7 +26,6 @@ describe('javascript-Recall', () => {
         let result = reverseWordsInArray(['dog', 'monkey', 'elephant', 'kayak']);
         expect(result).toEqual(['god', 'yeknom', 'tnahpele', 'kayak']);
     });
-
     it('makes every possible pairing of students', () => {
         let result = everyPossiblePair(['Jon', 'Tyrion', 'Daenerys']);
         // sorted alphabetically
@@ -87,7 +86,7 @@ describe('javascript-Recall', () => {
         let result = sumNumbers([1, 3, 5, 6, 2, 8]);
         expect(result).toEqual(25);
     });
-
+/************************************************* */
     it('repeats the elements of an array', () => {
         let result = repeatElements(['a', 'b', 'c']);
         expect(result).toEqual(['a', 'b', 'c', 'a', 'b', 'c']);

@@ -1,26 +1,35 @@
 let selectElementsStartingWithA = (array) => {
-    array.filter((fru) => fru.startsWith("A"));
-    return array;
-
+    let newArr =[];
+    array.forEach(fruit => {
+        if(fruit.startsWith("a")) {
+            newArr.push(fruit)
+        }
+    });
+   return newArr;
 }
 
 let selectElementsStartingWithVowel = (array) => {
-    return 'Write your method here';
+    
+   let vowel = array.filter(str => /^[aeiou]/i.test(str));
+    return vowel;
 }
 
 let removeNullElements = (array) => {
-
-    return 'Write your method here';
+    let filtered = array.filter(el => el != null);
+    return filtered;
 }
 
 let removeNullAndFalseElements = (array) => {
-    let filtered = array.filter(function(el) {
-        return el != null;
-    }
-});
+    return array.filter(e => e === 0 || e);
+}
 
 let reverseWordsInArray = (array) => {
-    return 'Write your method here';
+    let newArr = [];
+    array.forEach(animals => {
+        newArr.push(animals.split('').reverse().join(''))
+    });
+    
+    return newArr;
 }
 
 let everyPossiblePair = (array) => {
@@ -28,55 +37,84 @@ let everyPossiblePair = (array) => {
 }
 
 let allElementsExceptFirstThree = (array) => {
-    return 'Write your method here';
+    array.splice(0,3);
+    return array;
+
+    /*array.shift();
+    array.shift();
+    array.shift();
+    return array;*/
 }
 
 let addElementToBeginning = (array, element) => {
-    return 'Write your method here';
+    array.unshift(element);
+    return array;//pas de besoin de creer une nouvel array car l'array deja existant
 }
 
 let sortByLastLetter = (array) => {
-    return 'Write your method here';
+   /* return array.sort(
+        (a, b) => a.charCodeAt(a.length - 1) - b.charCodeAt(b.length - 1)
+    );*/
 }
 
 let getFirstHalf = (string) => {
-    return 'Write your method here';
+    return string.substr(0, Math.round(string.length / 2));
 }
 
 let makeNegative = (number) => {
-    return 'Write your method here';
+    return -Math.abs(number);// - = le signe moins (-)
 }
 
 let numberOfPalindromes = (array) => {
-    return 'Write your method here';
+    let countPalindromo = 0;
+    array.forEach(names => {
+       if(names.split('').reverse().join('') == names)
+    {
+        countPalindromo += 1;
+    }
+}); 
+       return countPalindromo;
 }
 
 let shortestWord = (array) => {
-    return 'Write your method here';
+    return ;
 }
 
 let longestWord = (array) => {
-    return 'Write your method here';
+    return ;
 }
 
 let sumNumbers = (array) => {
-    return 'Write your method here';
+   array.reduce((a,b) =>  a + b);//reduire a 2 le nombre d'elements dans le tableau pour pouvoir faire la somme
+   return array;
 }
-
+/******************************************** */
 let repeatElements = (array) => {
-    return 'Write your method here';
+    array.forEach(alphabet => {
+        array.push(alphabet)
+    });
+    return array;
 }
 
 let stringToNumber = (string) => {
-    return 'Write your method here';
+    return parseInt('3');
 }
 
 let calculateAverage = (array) => {
-    return 'Write your method here';
+    array.reduce((a,b) => a + b)/array.length;//lenght pour compter le nombre d'elements dans un tableau (ATTENTION le dot length)
+    return array;
 }
 
 let getElementsUntilGreaterThanFive = (array) => {
-    return 'Write your method here';
+    let newArr = [];
+    for(let i = 0; i<= 5; i++) {
+        newArr.push(array[i]);
+    };
+    return newArr;
+
+    /*newArr = array.splice(0,6);
+    console.log(newArr);
+    return newArr;*/
 }
 
 let convertArrayToObject = (array) => {
@@ -122,7 +160,10 @@ let checkForSpecialCharacters = (string) => {
 }
 
 let squareRoot = (number) => {
-    return 'Write your method here';
+    
+    return Math.sqrt(9);
+    return Math.sqrt(9)
+    
 }
 
 let factorial = (number) => {
