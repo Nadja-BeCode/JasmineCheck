@@ -9,8 +9,8 @@ let CreationTableauNombres =  () => {
 }
 
 let RemplacementElement =  (langages) => {
-    /*langages.splice(langages.indexOf('java'),2,'javascript');
-    return (langages);*/
+    langages[2] = 'Javascript';
+    return langages;
 }
 
 let AjoutElementLangages =  (langages) => {
@@ -34,12 +34,11 @@ let SuppressionDernierElement =  (langages) => {
 }
 
 let ConversionChaineTableau =  (reseaux_sociaux_chaine) => {
-    //return reseaux_sociaux.from(reseaux_sociaux_chaine);
+    return reseaux_sociaux_chaine.split(",");
 }
 
 let ConversionTableauChaine =  (langages) => {
-    /*let langages = ['CSS', 'Javascript', 'PHP', 'Ruby'];
-    return langages.toString(',');*/
+    return langages.toString();
 
 }
 

@@ -33,7 +33,8 @@ let IsString =  (texte) => {
 }
 /*********************************************************** */
 let AfficherExtensionString =  (texte) => {
-    return texte.slice(); //split et pop
+   return texte.split('.').pop();
+    
 }
 let NombreEspaceString =  (texte) => {
     return texte.split(" ").length - 1;
@@ -52,7 +53,11 @@ let valeurAbsolue =  (nombre) => {
     return Math.abs(nombre);
 }
 let valeurAbsolueArray =  (array) => {
-    return Math.abs([]);//for each et nouvel array et push dedans
+    let newArr = [];
+    array.forEach(numbers => {
+        newArr.push(Math.abs(numbers));
+    });
+    return newArr;
 }
 let sufaceCercle =  (rayon) => {
     return Math.round(Math.PI*rayon*rayon);
